@@ -1,0 +1,6 @@
+/vendor/
+/var/
+*.db
+.phpunit.result.cache
+.phpunit.cache/
+.idea

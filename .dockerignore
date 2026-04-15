@@ -1,0 +1,5 @@
+.git
+.phpunit.cache
+.claude
+var/
+vendor/
