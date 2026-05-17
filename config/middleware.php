@@ -18,12 +18,11 @@ return function (App $app): void {
     $logger = $app->getContainer()->get(LoggerInterface::class);
     $displayErrorDetails = $settings['debug'] ?? false;
     $logErrors = $settings['log_errors'] ?? true;
-    $errorMiddleware = $app->addErrorMiddleware(
+    $app->addErrorMiddleware(
         $displayErrorDetails,
         $logErrors,
         $logErrors
-    );
-    $errorMiddleware->setDefaultErrorHandler(
+    )->setDefaultErrorHandler(
         new JsonErrorHandler($logger)
     );
 };
